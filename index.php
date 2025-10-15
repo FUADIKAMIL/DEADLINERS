@@ -29,7 +29,7 @@ $result = mysqli_query($conn, $query);
     <td><?= $row['nama_status'] ?></td>
     <td>
       <a class="btn" href="edit_tugas.php?id=<?= $row['id_tugas'] ?>">Edit</a>
-      <a class="btn btn-danger" href="hapus_tugas.php?id=<?= $row['id_tugas'] ?>">Hapus</a>
+      <a class="btn btn-danger" href="hapus_tugas.php?id=<?= $row['id_tugas'] ?>" onclick="confirmDelete(event)">Hapus</a>
     </td>
   </tr>
   <?php endwhile; ?>

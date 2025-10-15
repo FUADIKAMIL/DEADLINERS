@@ -9,6 +9,13 @@ $base = '/deadliners/';
     <title>DEADLINERS</title>
 
     <link rel="stylesheet" href="<?= $base ?>\assets\style.css">
+    <script>
+        function confirmDelete(event) {
+            if (!confirm("Apakah kamu yakin ingin menghapus data ini?")) {
+                event.preventDefault();
+            }
+        }
+    </script>
 </head>
 <body>
 <header>

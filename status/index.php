@@ -18,7 +18,7 @@ $result = mysqli_query($conn, "SELECT * FROM status ORDER BY id_status");
     <td><?= $row['nama_status'] ?></td>
     <td>
       <a class="btn" href="edit.php?id=<?= $row['id_status'] ?>">Edit</a>
-      <a class="btn btn-danger" href="hapus.php?id=<?= $row['id_status'] ?>">Hapus</a>
+      <a class="btn btn-danger" href="hapus.php?id=<?= $row['id_status'] ?>" onclick="confirmDelete(event)">Hapus</a>
     </td>
   </tr>
   <?php endwhile; ?>

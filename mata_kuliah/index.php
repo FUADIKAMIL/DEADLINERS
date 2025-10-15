@@ -20,7 +20,7 @@ $result = mysqli_query($conn, "SELECT * FROM mata_kuliah ORDER BY nama_matkul");
     <td><?= $row['nama_dosen'] ?></td>
     <td>
       <a class="btn" href="edit.php?id=<?= $row['id_matkul'] ?>">Edit</a>
-      <a class="btn btn-danger" href="hapus.php?id=<?= $row['id_matkul'] ?>">Hapus</a>
+      <a class="btn btn-danger" href="hapus.php?id=<?= $row['id_matkul'] ?>" onclick="confirmDelete(event)">Hapus</a>
     </td>
   </tr>
   <?php endwhile; ?>
