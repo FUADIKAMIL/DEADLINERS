@@ -112,7 +112,6 @@ tr:hover td {
   background: rgba(138, 92, 246, 0.08);
 }
 
-/* BUTTONS */
 .btn {
   background: var(--accent);
   color: var(--text);
@@ -139,7 +138,6 @@ tr:hover td {
   background: #ff7b9a;
 }
 
-/* FORM */
 form {
   display: flex;
   flex-direction: column;
@@ -161,7 +159,6 @@ input:focus, textarea:focus, select:focus {
   outline: none;
 }
 
-/* FOOTER */
 footer {
   width: 100%;
   background: #141414;
@@ -187,7 +184,6 @@ footer a:hover {
   text-shadow: 0 0 8px var(--accent);
 }
 
-/* RESPONSIVE */
 @media (max-width: 700px) {
   nav {
     flex-direction: column;
