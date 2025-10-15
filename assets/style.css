@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+
+:root {
+  --bg: #0f0f0f;
+  --card: #181818;
+  --accent: #8a5cf6;
+  --accent-light: #a47cff;
+  --text: #f2f2f2;
+  --muted: #999;
+  --danger: #ff4d6d;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+}
+
+header {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.2rem 2rem;
+  margin: 1.5rem auto;
+  box-shadow: 0 0 25px rgba(138, 92, 246, 0.2);
+  position: sticky;
+  top: 1rem;
+  z-index: 10;
+  width: 98%;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.tagline {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  background: var(--accent);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius);
+  transition: 0.25s ease;
+}
+
+nav a:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+}
+
+main, .container {
+  flex: 1;
+  width: 98%;
+  margin: 1rem auto;
+  background: var(--card);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+h2 {
+  margin-bottom: 1.2rem;
+  color: var(--accent-light);
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  padding: 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+th {
+  color: var(--accent-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+tr:hover td {
+  background: rgba(138, 92, 246, 0.08);
+}
+
+/* BUTTONS */
+.btn {
+  background: var(--accent);
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+}
+
+.btn-danger {
+  background: var(--danger);
+}
+
+.btn-danger:hover {
+  background: #ff7b9a;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+input, textarea, select {
+  background: #222;
+  color: var(--text);
+  border: 1px solid #333;
+  padding: 0.6rem;
+  border-radius: var(--radius);
+  transition: 0.25s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  background: #141414;
+  color: var(--muted);
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  border-top: 1px solid #2a2a2a;
+  box-shadow: 0 -2px 20px rgba(138, 92, 246, 0.15);
+  margin-top: auto;
+  position: relative;
+  bottom: 0;
+}
+
+footer a {
+  color: var(--accent-light);
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+footer a:hover {
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent);
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+  }
+  table {
+    font-size: 0.9rem;
+  }
+  header, main, .container {
+    margin: 1rem;
+    padding: 1.2rem;
+  }
+}
